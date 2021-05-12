@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="outer-container">
+    <div class="blocker-box">
+      <div class="left-blocker blockers"></div>
+      <div class="right-blocker blockers"></div>
+    </div>
+    <div class="left-timer-box">
+      <div class="left-timer-loop"></div>
+    </div>
+    <div class="right-timer-box">
+      <div class="right-timer-loop"></div>
+    </div>
+
+    <div class="timer-container">
+      <div class="seconds-container">
+      </div>
+      <input type="text" maxlength="2" class="seconds-input" style="display:none"></input>
+      <div class="control-container">
+        <div class="play-button"></div>
+        <div class="pause-button">
+          <div class="pause-element"></div>
+          <div class="pause-element"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1>Timer App</h1>
+  <p>Dbl-click seconds to input a new timer length.</p>
+  <p>Then hit enter.</p>
+  <p>(99 seconds max)</p>
+  <script src="index.js"></script>
+</body>
+
+</html>
