@@ -1,5 +1,5 @@
 let totalSeconds = 60;
-let seconds = totalSeconds;
+let secondsLeft = totalSeconds;
 let rotatePerInterval = 360 / (totalSeconds * 100)
 let totalRotation = 0;
 
@@ -15,10 +15,10 @@ const rightTimerBox = document.querySelector('.right-timer-box');
 
 const secondsInput = document.querySelector('.seconds-input');
 
-secondsContainer.innerText = seconds;
+secondsContainer.innerText = secondsLeft;
 
 const countdown = () => {
-  if (seconds <= 0) {
+  if (secondsLeft <= 0) {
     pauseHandler();
     playButton.removeEventListener('click', playHandler);
     rightTimerBox.style.transform = `rotate(180deg)`;
@@ -36,9 +36,9 @@ const countdown = () => {
   } else if (totalRotation < 359.9) {
     rightTimerBox.style.transform = `rotate(${totalRotation}deg)`;
   }
-  seconds -= .01;
+  secondsLeft -= .01;
   totalRotation += rotatePerInterval;
-  secondsContainer.innerText = Math.ceil(seconds);
+  secondsContainer.innerText = Math.ceil(secondsLeft);
 
 }
 
@@ -93,7 +93,7 @@ const keyHandler = (e) => {
   } else if (e.key === 'Enter') {
     e.preventDefault();
     totalSeconds = parseInt(secondsInput.value);
-    seconds = totalSeconds;
+    secondsLeft = totalSeconds;
     rotatePerInterval = 360 / (totalSeconds * 100)
     totalRotation = 0;
     leftTimerBox.style.transform = `rotate(${totalRotation}deg)`;
@@ -103,7 +103,7 @@ const keyHandler = (e) => {
     leftBlocker.style.zIndex = 50;
     rightBlocker.style.zIndex = 25;
 
-    secondsContainer.innerText = seconds;
+    secondsContainer.innerText = secondsLeft;
 
     secondsInput.style.display = 'none';
     secondsInput.style.boxShadow = 'none';
