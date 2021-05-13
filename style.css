@@ -99,25 +99,8 @@ body {
   background-color: #a5e1ad;
 }
 
-.seconds-container {
-  width: 140px;
-  height: 80px;
-  font-size: 80px;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 45px;
-  line-height: 80px;
-  padding-top: 15px;
-  background-color: white;
-  color: #21094e;
-  border-radius: 15px;
-  cursor: default;
-  user-select: none;
-  font-weight: 500;
-  transition: box-shadow .5s;
-}
-
 .seconds-input {
+  display: block;
   width: 140px;
   height: 80px;
   font-size: 80px;
@@ -132,12 +115,13 @@ body {
   font-weight: 500;
   border: none;
   font-family: 'Newsreader';
-  caret-color: transparent;
   transition: box-shadow .5s;
+  caret-color: transparent;
 }
 
 .seconds-input:focus {
   outline: none;
+  box-shadow: 0 15px 15px black;
 }
 
 .control-container {
@@ -181,5 +165,5 @@ p {
   color: white;
   width: 50%;
   text-align: center;
-  margin: 0 auto;
+  margin: 4px auto;
 }
